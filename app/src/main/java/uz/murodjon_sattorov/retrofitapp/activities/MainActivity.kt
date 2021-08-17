@@ -33,11 +33,12 @@ class MainActivity : AppCompatActivity(), PullRefreshLayout.OnRefreshListener {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 
-        mainBinding.pullRefresh.setRefreshStyle(PullRefreshLayout.STYLE_RING)
+        mainBinding.pullRefresh.setRefreshStyle(PullRefreshLayout.STYLE_CIRCLES)
         mainBinding.pullRefresh.setColorSchemeColors(
             R.color.purple_200
         )
         mainBinding.pullRefresh.setOnRefreshListener(this)
+        mainBinding.pullRefresh.setRefreshing(true)
 
         loadUsers()
         loadPosts()
